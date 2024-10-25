@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Elegant Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            border: 4px solid #87ceeb;
+            border-radius: 10px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #87ceeb;
+            margin: 10px auto 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        input[type="text"], input[type="date"], select, input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        input[type="reset"]:hover {
+            background-color: #c82333;
+        }
+
+        #navbar{
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(141, 139, 200) 0%, rgb(115, 166, 200) 31%, rgba(77,225,255,1) 94%);
+            border-radius: 20px;
+        }
+       #navbar a{
+        font-size:25px;
+        padding:0px 28px;
+       }
+
+       #btn{
+        height:50px;
+        background-color: wheat;
+        border:2px solid brown;
+        border-radius:15px;
+        opacity: 0.8;
+       }
+    </style>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <span class="ml-3 text-xl">EmpowerNET</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900" href="index.html"><b>Home</b></a>
+            <a class="mr-5 hover:text-gray-900" href="aboutus.html"><b>About US</b></a>
+            <a class="mr-5 hover:text-gray-900" href="joinus.html"><b>Contact US</b> </a>
+            <a class="mr-5 hover:text-gray-900"href="mission.html"><b>The MISSON</b></a>
+            <a class="mr-5 hover:text-gray-900"href="practicalsol.html"><b>Practical Solution</b></a>
+            <a class="mr-5 hover:text-gray-900"href="awareness.html"><b>Awarness</b></a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="index.html">Back</a>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    <h2>Join Us Form</h2>
+    <form id="contact-form" action="https://formspree.io/f/mnnqnoek"
+    method="POST">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required>
+
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="orgname">School/Organization/Person Name</label>
+        <input type="text" id="orgname" name="orgname" required>
+
+        <label for="reason">Message</label>
+        <input type="text" id="reason" name="reason" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+        <input type="radio" id="other" name="gender" value="other"> Prefer not to say
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        // Optional: Show an alert on form submission
+        document.getElementById('contact-form').addEventListener('submit', function() {
+            alert("Thank you for your submission! We will get back to you soon.");
+        });
+    </script>
+</body>
+</html>
