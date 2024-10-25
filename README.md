@@ -1,2 +1,3 @@
 # St.-Xavier-s-World-School
-This has to be submitted for EmpowerX
+## Clone this repository to your computer
+git clone https://github.com/EmpowerX-2k24/St.-Xavier-s-World-School
